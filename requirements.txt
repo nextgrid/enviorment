@@ -1,0 +1,13 @@
+# Basic
+pandas
+numpy
+jupyter
+scipy
+matplotlib
+
+# required tensorflow 1.x
+tensorflow==1.15
+
+# AI Gym req
+stable-baselines[mpi]==2.8.0
+gym[box2d]
