@@ -1,0 +1,37 @@
+{
+  "name": "dllenv",
+  "version": "0.0.1",
+  "description": "AWS ENV config DLL",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "functions-framework --target=shopifyUploadCloudFunction",
+    "test": "nyc mocha",
+    "preversion": "",
+    "version": "git add -A",
+    "postversion": "npm run test && git push --tags"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "",
+      "pre-push": "",
+      "...": "..."
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextgrid/dllenv.git"
+  },
+  "keywords": [
+    "dll"
+  ],
+  "author": "nextgrid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nextgrid/dllenv/issues"
+  },
+  "homepage": "https://github.com/nextgrid/dllenv#readme",
+  "devDependencies": {
+    "husky": "^3.1.0"
+  }
+}
