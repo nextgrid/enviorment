@@ -9,7 +9,7 @@
     "test": "nyc mocha",
     "preversion": "",
     "version": "git add -A",
-    "postversion": "npm run test && git push --tags"
+    "postversion": "git push --tags"
   },
   "husky": {
     "hooks": {
