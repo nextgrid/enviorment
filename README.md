@@ -1,26 +1,10 @@
-# enviorment
-R&amp;D environment to get around complex installs and not being able to run output on Monitor / Display 
 
-## Windows
+# DLL ENVIORMENT @ AWS CloudFormation
 
- - Run x-server (Xming for example).
- - find out your IP
-![IP](windows.png)
-
-```
-ipconfig
-set DISPLAY=10.0.75.1:0.0
-docker run -it --rm -p 8888:8888 -e DISPLAY=%DISPLAY% -v /tmp/.X11-unix:/tmp/.X11-unix
-```
+Project goal is to get a fully functional setup on AWS CloudFormation.
 
 
 ```
-
-Stachlewski, Tomasz
-Fri, Nov 22, 5:16 PM (11 days ago)
-to me, Sandra, Marek
-
-Hi Mathias,
 
 As we discussed today on the call:
 
