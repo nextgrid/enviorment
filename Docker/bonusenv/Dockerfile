@@ -7,17 +7,17 @@ RUN apt-get update && \
 		build-essential \
 		curl \
 		xvfb \
-		ffmpeg \
 		xorg-dev \
-		libsdl2-dev \
 		swig \
 		cmake \
+		libsdl2-dev \
 		python-opengl \
 		libopenmpi-dev \
 		zlib1g-dev \
 		python3-pip \
 		python3-dev \
-		python3-setuptools
+		python3-setuptools \
+		x11-apps
 
 # install python dependencies
 COPY requirements.txt /tmp/requirements.txt
@@ -32,3 +32,6 @@ ENTRYPOINT ["/root/start.sh"]
 # copy notebook file
 RUN mkdir -p /root/workspace
 COPY wdll4.ipynb /root/workspace/wdll4.ipynb
+
+# this fixes x11 forwarding
+RUN rm -rf /tmp/* && rm -rf /var/tmp/*

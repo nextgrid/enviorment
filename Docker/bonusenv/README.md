@@ -1,15 +1,26 @@
-# enviorment
-R&amp;D environment to get around complex installs and not being able to run output on Monitor / Display 
+# Docker setup
+
+Remember that you must be running x-server (for example Xming on windows).
+
+## Build container 
+
+Navigate to folder with dockerfile and execute `docker build -t nextgridai` 
+
 
 ## Windows
 
- - Run x-server (Xming for example).
- - find out your IP
-![IP](windows.png)
-
 ```
-ipconfig
-set DISPLAY=10.0.75.1:0.0
-docker run -it --rm -p 8888:8888 -e DISPLAY=%DISPLAY% -v /tmp/.X11-unix:/tmp/.X11-unix
+docker run -it -p 8888:8888 -e DISPLAY=host.docker.internal:0 nextgridai
 ```
 
+## Mac OS
+
+```
+docker run -it -e DISPLAY=docker.for.mac.host.internal:0 nextgridai
+```
+
+## Linux
+
+```
+docker run -it --net=host -e DISPLAY=:0 nextgridai
+```
