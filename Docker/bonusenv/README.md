@@ -2,6 +2,10 @@
 
 Remember that you must be running x-server (for example Xming on windows).
 
+## Build container 
+
+Navigate to folder with dockerfile and execute `docker build -t nextgridai` 
+
 
 ## Windows
 
