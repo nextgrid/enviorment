@@ -6,7 +6,7 @@ scipy
 matplotlib
 
 # required tensorflow 1.x
-tensorflow==1.15
+tensorflow==2.5.0
 
 # AI Gym req
 stable-baselines[mpi]==2.8.0
